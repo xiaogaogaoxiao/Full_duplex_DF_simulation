@@ -8,8 +8,8 @@ Using Python to simulate decode and forward (DF) communication system
 ## S -> R
 equation_01:
 
-![equation_01](https://raw.githubusercontent.com/MeowLucian/Full_duplex_DF_simulation/master/Pictures/equation_01.png)
+![equation_01](https://raw.githubusercontent.com/MeowLucian/Full_duplex_DF_simulation/master/Pictures/equation_01.PNG)
 
 equation_02:
 
-![equation_02](https://raw.githubusercontent.com/MeowLucian/Full_duplex_DF_simulation/master/Pictures/equation_02.png)
+![equation_02](https://raw.githubusercontent.com/MeowLucian/Full_duplex_DF_simulation/master/Pictures/equation_02.PNG)
