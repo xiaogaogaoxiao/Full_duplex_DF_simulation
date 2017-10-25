@@ -17,8 +17,8 @@ h_rr_gain_Linear = 10**(h_rr_gain/10)
 h_sd_gain = -5 # dB
 h_sd_gain_Linear = 10**(h_sd_gain/10)
 Eb_N0_all =  np.arange(0,32,2) # dB
-#Tx_number = 10**6 # Number of transmission
-Tx_number = 17000 # Number of transmission
+Tx_number = 10**6 # Number of transmission
+#Tx_number = 17000 # Number of transmission
 BER_all = np.zeros([np.size(Eb_N0_all),Tx_number]) # Initialize
 
 # Main
