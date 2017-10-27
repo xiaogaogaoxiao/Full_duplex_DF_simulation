@@ -1,6 +1,6 @@
 clear;close all;clc;j=1i;
 tic;
-parpool('local',8);
+% parpool('local',8);
 %% Parameters
 L = 30; % Number of Symbols
 tau = 1; % Number of Delay
@@ -13,8 +13,8 @@ h_rr_gain_Linear = 10^(h_rr_gain/10);
 h_sd_gain = -5; % dB
 h_sd_gain_Linear = 10^(h_sd_gain/10);
 Eb_N0_all = 0:2:30; % dB
-Tx_number = 1e6; % Number of transmission
-% Tx_number = 17000; % Number of transmission
+% Tx_number = 1e6; % Number of transmission
+Tx_number = 17000; % Number of transmission
 %% Main
 BER_all = zeros(Tx_number,length(Eb_N0_all)); % Initialize
 for s = 1:length(Eb_N0_all) % SNR Loop
@@ -29,7 +29,7 @@ for s = 1:length(Eb_N0_all) % SNR Loop
     Expected_value_h_sd = sum(abs(h_sd).^2)/length(h_sd); % E[|h|^2]=0.3162
     Expected_value_h_rd = sum(abs(h_rd).^2)/length(h_rd); % E[|h|^2]=1
     fprintf(1,['Expected_value = ', num2str(Expected_value_h_sr), '\n']); % Display
-    parfor Tx = 1:Tx_number % Transmission Loop
+    for Tx = 1:Tx_number % Transmission Loop
         %% Data_Payload generation
         M = 4; % QPSK
         Data_Payload = randi([0 M-1],L,1);
